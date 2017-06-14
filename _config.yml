@@ -1,0 +1,19 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            碎碎念
+tagline:          '依然碎碎念'
+description:      '碎碎念'
+url:              https://yanwang10.github.io
+
+author:
+  name:           'Yan Wang'
+  url:            https://yanwang10.github.io
+
+paginate:         5
+gems: [jekyll-paginate]
