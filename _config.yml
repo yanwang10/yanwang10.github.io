@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 highlighter:      pygments
 
 # Permalinks
@@ -10,6 +10,7 @@ title:            碎碎念
 tagline:          '依然碎碎念'
 description:      '碎碎念'
 url:              https://yanwang10.github.io
+baseurl:          /
 
 author:
   name:           'Yan Wang'
