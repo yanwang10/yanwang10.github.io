@@ -44,7 +44,17 @@ input[type=submit]:hover {
   }
 </script>
 
+
 {% if page.comments %}
+  <!-- show existing comments -->
+  {% if site.data.comments[page.slug] %}
+    {% assign comments = site.data.comments[page.slug] %}
+    {% for comment in comments %}
+      {% include single__comment.html comment=comment %}
+    {% endfor %}
+  {% endif %}
+
+  <!-- the form to submit new comments -->
   <form id="comment-form" method="POST" action="https://api.staticman.net/v2/entry/yanwang10/yanwang10.github.io/master/comments">
     <input id="comment-form-redirect" name="options[redirect]" type="hidden" value="javascript:window.location.href=window.location.href">
     <input name="options[slug]" type="hidden" value="{{ page.slug }}">

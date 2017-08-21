@@ -1,0 +1,7 @@
+{% assign c = comment[1] %}
+
+<div>
+  <b>{{ c.name }}</b>
+  <time datetime="{{ c.date | date_to_xmlschema }}">{{ c.date | date: "%Y-%m-%d %I:%M %p" }}</time>
+  <p>{{ c.message }}</p>
+</div>

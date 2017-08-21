@@ -11,6 +11,7 @@ tagline:          '依然碎碎念'
 description:      '碎碎念'
 url:              https://yanwang10.github.io
 baseurl:          /
+timezone:         Asia/Chongqing
 
 author:
   name:           'Yan Wang'
