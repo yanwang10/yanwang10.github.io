@@ -17,5 +17,5 @@ author:
   name:           'Yan Wang'
   url:            https://yanwang10.github.io
 
-paginate:         5
+paginate:         10
 gems: [jekyll-paginate]
