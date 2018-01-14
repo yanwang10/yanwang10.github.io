@@ -10,7 +10,7 @@ tags:
 -  科研
 ---
 
-本帖专门收集一些稍早的论文，看到了就更新一下。
+本帖列举其他有趣或者经典的文章，看到了就更新一下。
 
 ## Frustratingly Easy Domain Adaptation (arxiv 2009)
 
@@ -34,6 +34,8 @@ tags:
 
 `Social Agony`，假设社交网络中的人们会互相推荐，一般来说上游的人推荐下游的人，要去掉噪音回边来形成 DAG，给边赋一定的权重，然后求一个总权重最大的 DAG 子图。如果所有边权重一样就退化为 MFAS 问题。
 
+然后基于前两种基础方法，设计了一系列启发删边策略，用 voting 的方法聚合一下做出最终删边的决策。
+
 实验部分没太看，反正也没什么太多的分析，跑一堆数据也没意思，还是去看 TrueSkill 。
 
 ## TrueSkill: A Bayesian Skill Rating System (NIPS 2007)
@@ -43,4 +45,8 @@ tags:
 这个算法是 Elo 算法的升级版，用于评估玩家的竞技水平，也是贝叶斯派的方法，可以考虑多人组队比赛的情况（不仅限于 1v1 的比赛），而且声称在 Xbox 上商用了。
 
 略复杂，暴露了对贝叶斯的不了解……
+
+## Opening the Black Box of Deep Neural Networks via Information
+
+兴趣点：整个标题都是兴趣点
 
