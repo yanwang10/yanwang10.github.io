@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>调查 on 碎碎念</title>
+    <link>https://yanwang10.github.io/tags/%E8%B0%83%E6%9F%A5/</link>
+    <description>Recent content in 调查 on 碎碎念</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 31 Mar 2018 11:37:52 -0700</lastBuildDate>
+    
+	<atom:link href="https://yanwang10.github.io/tags/%E8%B0%83%E6%9F%A5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>视频监控系统小调查</title>
+      <link>https://yanwang10.github.io/2018/03/31/surveillance-vms/</link>
+      <pubDate>Sat, 31 Mar 2018 11:37:52 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2018/03/31/surveillance-vms/</guid>
+      <description>调查目标：找一套合适的软件系统，可以用于视频监控，并且部署在自己的硬件上。</description>
+    </item>
+    
+    <item>
+      <title>CFA 一级网课小调查</title>
+      <link>https://yanwang10.github.io/2018/01/14/cfa-online-course-survey/</link>
+      <pubDate>Sun, 14 Jan 2018 13:43:52 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2018/01/14/cfa-online-course-survey/</guid>
+      <description>调查目标：找一些网络课程来学习、备考 CFA 一级。</description>
+    </item>
+    
+  </channel>
+</rss>

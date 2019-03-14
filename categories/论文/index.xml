@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>论文 on 碎碎念</title>
+    <link>https://yanwang10.github.io/categories/%E8%AE%BA%E6%96%87/</link>
+    <description>Recent content in 论文 on 碎碎念</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 02 Dec 2017 21:21:21 -0700</lastBuildDate>
+    
+	<atom:link href="https://yanwang10.github.io/categories/%E8%AE%BA%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NIPS 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/12/02/nips17/</link>
+      <pubDate>Sat, 02 Dec 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/12/02/nips17/</guid>
+      <description>录用论文列表 ：NIPS 2017 Accepted papers</description>
+    </item>
+    
+    <item>
+      <title>ACL 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/08/12/acl17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/08/12/acl17/</guid>
+      <description>录用论文列表 ：ACL 2017 Accepted papers</description>
+    </item>
+    
+    <item>
+      <title>EMNLP 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/08/19/emnlp17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/08/19/emnlp17/</guid>
+      <description>录用论文列表：EMNLP 2017 Accepted papers</description>
+    </item>
+    
+    <item>
+      <title>IJCAI 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/09/10/ijcai17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/09/10/ijcai17/</guid>
+      <description>录用论文列表：IJCAI 2017 Accepted papers</description>
+    </item>
+    
+    <item>
+      <title>KDD 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/08/12/kdd17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/08/12/kdd17/</guid>
+      <description>录用论文列表 ：KDD 2017 Accepted papers</description>
+    </item>
+    
+    <item>
+      <title>为什么我想要追论文</title>
+      <link>https://yanwang10.github.io/2017/07/05/why-to-read-papers/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/07/05/why-to-read-papers/</guid>
+      <description>说来惭愧，已经有许久时间，没有定时定量读论文了。</description>
+    </item>
+    
+    <item>
+      <title>陈年老 Paper</title>
+      <link>https://yanwang10.github.io/2017/09/23/old-papers/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/09/23/old-papers/</guid>
+      <description>本帖列举其他有趣或者经典的文章，看到了就更新一下。</description>
+    </item>
+    
+  </channel>
+</rss>

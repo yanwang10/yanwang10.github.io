@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nas on 碎碎念</title>
+    <link>https://yanwang10.github.io/tags/nas/</link>
+    <description>Recent content in Nas on 碎碎念</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 13 Jun 2017 21:21:21 -0700</lastBuildDate>
+    
+	<atom:link href="https://yanwang10.github.io/tags/nas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>用 NAS 搭私有云</title>
+      <link>https://yanwang10.github.io/2017/06/14/new-nas/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/06/14/new-nas/</guid>
+      <description>最近一不小心进了 NAS 的坑，入了设备之后玩儿了几天，感觉非常有趣，可玩性很不错。本文记录一下自己折腾的成果，不时会来更新。</description>
+    </item>
+    
+  </channel>
+</rss>

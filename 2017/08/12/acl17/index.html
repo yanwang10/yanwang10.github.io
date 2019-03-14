@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.40.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ACL 2017 阅读笔记 &middot; 碎碎念</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://yanwang10.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://yanwang10.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://yanwang10.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://yanwang10.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="碎碎念" />
+
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://yanwang10.github.io/"><h1>碎碎念</h1></a>
+      <p class="lead">
+       偶尔碎碎念 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://yanwang10.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2019. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>ACL 2017 阅读笔记</h1>
+  <time datetime=2017-06-13T21:21:21-0700 class="post-date">Tue, Jun 13, 2017</time>
+  
+
+<p>录用论文列表 ：<a href="https://chairs-blog.acl2017.org/2017/04/05/accepted-papers-and-demonstrations/">ACL 2017 Accepted papers</a></p>
+
+<p>只浏览了 Long Paper 的几个section。</p>
+
+<h1 id="ie-qa-text-mining-applications">IE QA Text Mining Applications</h1>
+
+<h2 id="learning-with-noise-enhance-distantly-supervised-relation-extraction-with-dynamic-transition-matrix">Learning with Noise: Enhance Distantly Supervised Relation Extraction with Dynamic Transition Matrix</h2>
+
+<p>兴趣点：Noise in Relation Extraction</p>
+
+<p>没看懂这篇文章想干啥，只大概看了下核心部分，后面看不下去了。在正常训练过程中，模型会对每一个句子输出在各个 relation 上的概率分布 $$p$$，本文提出同时优化一个表征噪音的矩阵 $$T$$，即 Transition Matrix，第 i 行第 j 列的元素表示第 i 个 relation 错误地被标为 j 的概率。这个矩阵是对每个句子都计算的，训练过程中用 $$T^T \times p$$ 归一化之后的结果作为输出的分布，用于计算损失函数；测试过程中不考虑 $$T$$ 直接用 $$p$$ 作为输出。</p>
+
+<p>很好奇多数情况下 $$T$$ 到底有多稠密，这个矩阵不一定会刻画噪音，没准会学出来一些不同 relation 之间的相关性，对于直接学习的模型输出进行调整。以及这个额外的计算量正比于支持的 relation 数量的平方，复杂度也是个问题，或许可以通过先验知识限制一下非零元素的个数。</p>
+
+<p>不太了解 TimeRE 这个评测集是什么样的，看到 0.9 precision 的时候能达到 0.8 recall，惊呆了，现在的数据都刷这么高了么。以及在 EntityRE 评测集上，avg 跟 avg_TM 区别不大，att_TM 只比 att 在 low recall high precision 的一端明显强一些，究竟是 TM 可以对 Distant Supervision 有帮助，还是 TM 可以修正掉 attention 的某些问题，有点可疑。</p>
+
+<h2 id="neural-relation-extraction-with-multi-lingual-attention">Neural Relation Extraction with Multi-lingual Attention</h2>
+
+<p>兴趣点：Yankai Lin, Zhiyuan Liu</p>
+
+<h2 id="reading-wikipedia-to-answer-open-domain-questions">Reading Wikipedia to Answer Open-Domain Questions</h2>
+
+<p>兴趣点：Wikipedia, Danqi Chen</p>
+
+<h1 id="semantics">Semantics</h1>
+
+<h2 id="improved-word-representation-learning-with-sememes">Improved Word Representation Learning with Sememes</h2>
+
+<p>兴趣点：Zhiyuan Liu</p>
+
+<h2 id="riemannian-optimization-for-skip-gram-negative-sampling">Riemannian Optimization for Skip-Gram Negative Sampling</h2>
+
+<p>兴趣点：Negative Sampling</p>
+
+<h2 id="skip-gram-zipf-uniform-vector-additivity">Skip-Gram – Zipf + Uniform = Vector Additivity</h2>
+
+<p>兴趣点：Vector Additivity</p>
+
+<p>本文没有提到实验结果，纯理论分析。首先分析了 Skip-Gram 中的 Compositionality 问题，发现当<strong>词的分布更近均匀分布的时候，得到的词向量可加性更好</strong>（一般语料中词频应该是 Zipf 分布）。这里所谓的可加性，是指对于一个包含若干词的 Context，用词向量的和来表示这个 Context 的语义。然后考虑如何把 Context 的语义投射回单词表中，理论上要求分布尽可能相同（公式7），但满足可加性之后，cosine similarity 就是一个很好的 proxy，也就是说，单词表中与 Context Vector 的 cosine similarity 最大的词，就是最可能的 paraphrase。</p>
+
+<p>后面将 Skip-Gram 与 Sufficient Dimentionality Reduction 框架做了对比，找出了一些关联之处，由 SDR 的信息论最优推出 Skip-Gram 的最优性，没有详细读。</p>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>
