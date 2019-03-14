@@ -6,10 +6,19 @@
     <description>Recent content in 技术 on 碎碎念</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 02 Dec 2017 21:21:21 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 14 Mar 2019 05:03:59 +0000</lastBuildDate>
     
 	<atom:link href="https://yanwang10.github.io/tags/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>搬家啦！从 Jekyll 到 Hugo</title>
+      <link>https://yanwang10.github.io/posts/2019-03-13-move-to-hugo/</link>
+      <pubDate>Thu, 14 Mar 2019 05:03:59 +0000</pubDate>
+      
+      <guid>https://yanwang10.github.io/posts/2019-03-13-move-to-hugo/</guid>
+      <description>把博客从 Jekyll 迁移到 Hugo 啦~</description>
+    </item>
     
     <item>
       <title>NIPS 2017 阅读笔记</title>
