@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>小调查 on 碎碎念</title>
+    <link>https://yanwang10.github.io/categories/%E5%B0%8F%E8%B0%83%E6%9F%A5/</link>
+    <description>Recent content in 小调查 on 碎碎念</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 31 Mar 2018 11:37:52 -0700</lastBuildDate>
+    
+	<atom:link href="https://yanwang10.github.io/categories/%E5%B0%8F%E8%B0%83%E6%9F%A5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>视频监控系统小调查</title>
+      <link>https://yanwang10.github.io/2018/03/31/surveillance-vms/</link>
+      <pubDate>Sat, 31 Mar 2018 11:37:52 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2018/03/31/surveillance-vms/</guid>
+      <description>调查目标：找一套合适的软件系统，可以用于视频监控，并且部署在自己的硬件上。
+硬性需求： * 可以完全部署在自己的硬件上（电脑或者 NAS），不需要云端服务器介入。 * 可以支持多种网络摄像头（而不只是局限于几个特定品牌）。
+其他关注点：
+ 软件属性：是否开源，费用（一次性付费或者订阅模式，每个通道的价格），支持哪些部署环境。 监控系统特性：支持的通道数量，视频质量，是否支持智能识别（如运动捕获、人脸识别等），是否通过网页进行操作，是否有其他使用限制（比如免费版有水印或者不能长时间保存视频等）。  一些现成的列表：
+ TOP BEST FREE/PAID VIDEO MANAGEMENT SOFTWARE FOR IP CAMERAS CCTV Test: VMS for free?  威联通 NAS 官方应用 作为威联通 NAS 的用户，首先想到的是威联通官方提供的 QVR Pro 和 Surveillance Station 两个应用，虽然没试用过，也不知道这两者有何异同，不过相信官方应可维护性和性能应该比较好，而且给出了所有支持的网络摄像头列表，兼容性上应该不成问题。
+主要问题就是贵，付费模式是一次性购买授权，Surveillance Station 的价格是每个通道 $60（最多4个通道），QVR Pro 的价格是每个通道 $60~70（最多8个通道）。不知道实际上需要多少通道，不过 4 个实在有点少，8 个还凑合。
+因此，才会想要调查其他的可能选项，运行在自己的 NAS 上。
+ZoneMinder 一个开源免费的系统 (Github)，根据介绍，这套系统提供网页操作支持，兼容网络摄像头（IP-enabled camera），给主流 Linux 发行版准备了安装包，也可以自己编译打包成 Docker 镜像，不支持 Windows。有文档介绍安装、部署、使用，有相对较活跃的论坛，甚至接通了 BountySource，可以付费悬赏实现特定的功能或者文档需求。
+Rapidvms 一个开源的系统（家用免费，商用付费），可以自己编译部署服务器端，有文档支持。客户端声称跨平台，免费版是用特定的客户端软件进行操作，也可以按年付费（$30/年）使用该公司开发的 H5stream 系统，这样就可以使用网页版的控制台。似乎整个产品还在开发中，刚支持 OpenCV 并提供了一个人脸识别的用例，</description>
+    </item>
+    
+    <item>
+      <title>CFA 一级网课小调查</title>
+      <link>https://yanwang10.github.io/2018/01/14/cfa-online-course-survey/</link>
+      <pubDate>Sun, 14 Jan 2018 13:43:52 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2018/01/14/cfa-online-course-survey/</guid>
+      <description>调查目标：找一些网络课程来学习、备考 CFA 一级。
+个人条件简单描述就是湾区码农。具体描述起来大概包括这些方面：
+ 纯理工背景：对于高数线代的基础内容，复习一下应该还是可以想起来不少的。 无经济、金融背景：完全零基础，这也是需要通过网课学习的原因，自己看书（即便是 notes）太吃力，恐难以坚持。 需要时间灵活：全职工作，基本只有周末有空，直播甚至现场课程就算了，必须支持视频回看。  关注点包括：
+ 授课语言：不得不说还是中文授课更亲切、高效一些，特别是在对整个术语体系不了解的情况下，全英文授课可能前期比较痛苦，考虑自己的英语水平，先用母语搭起概念框架再映射到英语也是可选的选项。 时间长度：可能需要做好持久战的准备，需要有详尽的课程内容，只有概念导览或者考前冲刺是不够的。 价格：太便宜甚至免费的课程担心不靠谱，太贵的课程担心不实用（比如直播课就不实用，要么有时差要么语言能力欠缺）甚至被收智商税。  中文课程选项 可选选项全部来自搜索引擎的直接结果，或者结果页面中提到的间接结果。
+上海财经大学商学院培训中心 来自很早的一个豆瓣帖子的最近回复。
+提前报名约 ￥4K，当期报名约 ￥7K。至少有上财的名号背书。
+高顿网校 搜索结果，非广告位。
+没看出什么明显特色，有多种班次，价位和课时差异巨大。
+金程教育 搜索结果，非广告位。
+号称 2012 年开班以来一级通过率非常高（近两年在75%~80%），长线班 ￥13K，冲刺班 ￥8K。
+沪江网校 搜索结果，非广告位。
+使用沪江旗下的 CCtalk授课，没搞清楚是直播还是视频回放，还是两者兼有。￥7.5K。
+TheAnalystSpace 搜索结果，非广告位。
+有很多小的系列课，比如各个科目、考前模拟、试题讲解等，每个小课 $50~$100 量级。也可以一次性付费成为会员（$240），获取访问所有课程的权限，默认权限到最近一次 CFA 考试截止（或者报名时告知考试时间，设置权限到考试结束后过期）。
+随机看了一个导论，全中文讲解+全英文课件。
+英文课程选项 FitchLearning 搜索结果，广告位。
+$700 网课或者 $1k 直播课，似乎没有长线学习的选项，都是冲下次考试的 program。特色不明。
+Kaplan Schweser 搜索结果，非广告位。
+$1.1K 的网课，没搞清楚这个 &amp;ldquo;Online Weekly Class&amp;rdquo; 到底是直播还是回看还是兼有，也是冲刺半年后 CFA 考试的项目。
+Wiley 来自两篇疑似广告的 CFA 课程盘点的最高推荐（盘点1， 盘点2，均来自搜索结果）。</description>
+    </item>
+    
+  </channel>
+</rss>

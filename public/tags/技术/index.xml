@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on 碎碎念</title>
+    <link>https://yanwang10.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on 碎碎念</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 02 Dec 2017 21:21:21 -0700</lastBuildDate>
+    
+	<atom:link href="https://yanwang10.github.io/tags/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NIPS 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/12/02/nips17/</link>
+      <pubDate>Sat, 02 Dec 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/12/02/nips17/</guid>
+      <description>录用论文列表 ：NIPS 2017 Accepted papers
+Hash Embeddings for Efficient Word Representations 兴趣点：Hash embedding, efficient
+Attention Is All You Need 兴趣点：Attention, No Recurrent
+本文简直就是启发策略大合集，整体结构还算简明，大量篇幅介绍模型中的各种小 trick。整体结构来看，encoder 和 decoder 分别用多层 multi-head attention （其中 decode 中加入了一个 masking 用于消除 illegal connection），相邻层之间传递残差 （带 dropout），如果模型展开的话确实像变形金刚的两条腿，也不愧叫做 Transformer。这个模型结构的好处是，通过取消 recurrent 层，提高计算的并行度，同时计算量也明显减少，适合用 GPU 或者 TPU。至于性能嘛……光在机器翻译的公开数据集上测试，我是不太信的。
+细节的 trick 主要包括：
+ 在计算 attention 的时候加入了一个分母（维度的平方根），生成这是为了弥合 multiplicative attention 和 additive attention 之间的性能差异。同一个分母也加入到了每个 attention 层内部的 softmax 之前。 位置编码，用正余弦函数来编码位置，限定了一个波长范围，这个函数有个特点，如果两个位置之间有固定的 offset，那么这两个位置的编码之间存在线性关系。好处就是，测试的序列长度可以比训练的序列更长。  知乎传送门：如何理解谷歌团队的机器翻译新作《Attention is all you need》？</description>
+    </item>
+    
+    <item>
+      <title>ACL 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/08/12/acl17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/08/12/acl17/</guid>
+      <description>录用论文列表 ：ACL 2017 Accepted papers
+只浏览了 Long Paper 的几个section。
+IE QA Text Mining Applications Learning with Noise: Enhance Distantly Supervised Relation Extraction with Dynamic Transition Matrix 兴趣点：Noise in Relation Extraction
+没看懂这篇文章想干啥，只大概看了下核心部分，后面看不下去了。在正常训练过程中，模型会对每一个句子输出在各个 relation 上的概率分布 $$p$$，本文提出同时优化一个表征噪音的矩阵 $$T$$，即 Transition Matrix，第 i 行第 j 列的元素表示第 i 个 relation 错误地被标为 j 的概率。这个矩阵是对每个句子都计算的，训练过程中用 $$T^T \times p$$ 归一化之后的结果作为输出的分布，用于计算损失函数；测试过程中不考虑 $$T$$ 直接用 $$p$$ 作为输出。
+很好奇多数情况下 $$T$$ 到底有多稠密，这个矩阵不一定会刻画噪音，没准会学出来一些不同 relation 之间的相关性，对于直接学习的模型输出进行调整。以及这个额外的计算量正比于支持的 relation 数量的平方，复杂度也是个问题，或许可以通过先验知识限制一下非零元素的个数。
+不太了解 TimeRE 这个评测集是什么样的，看到 0.9 precision 的时候能达到 0.8 recall，惊呆了，现在的数据都刷这么高了么。以及在 EntityRE 评测集上，avg 跟 avg_TM 区别不大，att_TM 只比 att 在 low recall high precision 的一端明显强一些，究竟是 TM 可以对 Distant Supervision 有帮助，还是 TM 可以修正掉 attention 的某些问题，有点可疑。</description>
+    </item>
+    
+    <item>
+      <title>EMNLP 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/08/19/emnlp17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/08/19/emnlp17/</guid>
+      <description>录用论文列表：EMNLP 2017 Accepted papers
+Importance sampling for unbiased on-demand evaluation of knowledge base population 兴趣点：Importance sampling, Percy Liang, Christopher D. Manning
+Supervised Learning of Universal Sentence Representations from Natural Language Inference Data 兴趣点：Sentence Representations, Antoine Bordes
+Bringing Structure into Summaries: Crowdsourcing a Benchmark Corpus of Concept Maps 兴趣点：Crowdsourcing, Benchmark Corpus
+这篇文章跟想象的不太一样，主要涉及的任务是 Multi-document Summarization, 其中的 Concept Map 是一种表示文章内容的手段。Concept Map 用来表示一批相关文档中的主要内容，是一个大小有约束的连通图，节点是文中提到的概念，边是概念间的关系，这里的“概念”和“关系”都是用词的序列来表示（不连接到KG）。一条边加上连接的两个点，就可以构成一个陈述句了。
+多文本摘要的传统标注非常昂贵，特别是 Concept Map 则对一般标注者不友好，只能由专家来标注（更昂贵）。本文通过标注 Concept Map 中的边（其实是陈述句）的重要性，来对特定话题的若干陈述进行排序（标注者不需要通读所有文章），得到最终的 Concept Map。
+这篇文章后面的部分主要讲解如何设置标注任务，以及对于标注结果可靠性、一致性的分析，介绍了很多细节。就没仔细看了。如果想更好地利用廉价的人工标注（区别于专家标注），应该能从本文中找到不少启发。</description>
+    </item>
+    
+    <item>
+      <title>IJCAI 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/09/10/ijcai17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/09/10/ijcai17/</guid>
+      <description>录用论文列表：IJCAI 2017 Accepted papers
+Learning to Explain Entity Relationships with Pairwise Deep Ranking 兴趣点：Entity Relationships，Pairwise Deep Ranking
+Reconstruction-based Unsupervised Feature Selection: An Embedded Approach 兴趣点：Feature Selection, Reconstruction
+Improving Learning-from-Crowds through Expert Validation 兴趣点：Crowds, Expert
+Positive unlabeled learning via wrapper-based adaptive sampling 兴趣点：Adaptive sampling
+Hierarchical Feature Selection with Recursive Regularization 兴趣点：Hierarchical feature selection
+看了摘要发现主要处理的问题是 hierarchical classification (相对于 flat classification 而言) 中的特征筛选问题。一句 “In the big data era” 把我拉回学生时代。
+发现文章并没有介绍我真正感兴趣的话题，就没看了。对标题的理解有歧义，我的理解是 select hierarchical features，文章内容是 select features hierarchically.</description>
+    </item>
+    
+    <item>
+      <title>KDD 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/08/12/kdd17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/08/12/kdd17/</guid>
+      <description>录用论文列表 ：KDD 2017 Accepted papers
+只浏览了 RESEARCH TRACK PAPERS - ORAL 的部分。
+Learning certifiably optimal rule lists for categorical data 兴趣点：Rule learning
+本文讲了一种在小规模数据+离散特征的条件下，学习 decision rule 模型的一种算法。符号记法比较复杂，有很多证明，匆匆扫了一眼。主要是用前缀树做了一些优化，证了一些跟前缀有关的定理，实验的数据太小了（$$O(10K)$$ 训练样例，$$O(10)$$ 个 categorical 特征维度，目测可以转化为 $$O(100)$$ 个 binary 特征）。不过 certifiably 确实是一个引人注目的特性。
+Local Higher-Order Graph Clustering 兴趣点：Jure Leskovec
+看不懂= = 弃疗
+Discrete Content-aware Matrix Factorization 兴趣点：Matrix Factorization, Descrete
+Toeplitz Inverse Covariance-Based Clustering of Multivariate Time Series Data 兴趣点：Time Series, Jure Leskovec
+Linearized GMM Kernels and Normalized Random Fourier Features 兴趣点： Random Fourier Features</description>
+    </item>
+    
+    <item>
+      <title>为什么我想要追论文</title>
+      <link>https://yanwang10.github.io/2017/07/05/why-to-read-papers/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/07/05/why-to-read-papers/</guid>
+      <description>说来惭愧，已经有许久时间，没有定时定量读论文了。
+曾几何时，也有过一个科研梦，想要读博，想要突破人类知识的边界。后来阴差阳错连滚带爬读了硕进入工业界，隐约感到自己不是搞科研的料，不过还是有点小遗憾。所幸本科期间做过一些粗浅的科研工作，虽然没啥成果，至少感受了一下过程。硕士阶段做过一些话题的调研，读了一些论文。工作了之后也有组里的 reading group，同事们时常推荐一些论文，以及东家也算是工业界盛产论文的大厂，偶尔感兴趣会去围观一下最新成果。这样说来，也算是一直没有扔下读论文这门功课。
+论文需要读，或者说需要追。除去极少数开天辟地的神作，大多数论文都互相连接、形成脉络，而不是独立存在的，而且。追论文有多种维度，可以追某些大学或者公司的研究组的工作，追某些话题或者方法，或者干脆就是追某些会议。我觉得追会议是一种非常有效的方式，原因有下：
+ Peer review 帮助大家把大部分质量低劣或者没有新意的论文挡在门外，顶级会议录用的文章的质量相对更有保证一些，不像前段时间 arxiv 上某篇文章标题大而不当而且质量堪忧，引起“大讨论”。 会议已经按照大方向划分了论文，而且各个会议还有不同的风格，表现在论文的侧重点不同（偏理论/应用），各种方法占据比例不一，术语体系也略有不同。相似的文章放在一起看，大概会轻松一些。 按会议追论文，可以同时看到不同研究组的工作，百家争鸣当然是好事，开拓眼界。  追论文是长久的修行。一段时间不读论文，阅读速度也慢了，对工作思路也不敏感了，不知道现在什么话题、什么方法比较火，效果如何，对于未来的趋势更是毫无概念。所幸偶尔还刷刷公众号，比如 PaperWeekly、新智元、程序媛的日常等，所以还算没有与世隔绝。这些公众号提供了不错的服务，筛选时下最火的工作，给出中文的摘要和评述，可以大大提高吸收的效率。但仅靠看这些公众号的推送，是难以达到自己追论文的效果的，原因有很多：
+ 每个公众号推送数量有限，各个号覆盖的工作又有不少重合之处，最终的总覆盖率实在太低。跟 AI/ML/DL/NLP 相关的优秀会议，录用文章数量往往有上百篇甚至三四百篇，读四五十篇摘要、通读十几篇论文，完全不算夸张。相比而言公众号里只提到十几篇文章的摘要，数量相差太多了。 公众号推送难免考虑传播的效果，噱头多、背景硬的文章大概更容易受重视。有些工作扎扎实实打磨细节但是相对枯燥，或者理解的门槛非常高，恐怕不能入选推送，而这些工作可能对我会更有启发。 公众号编辑、运营人员的精力和水平都是有限的，有那么多的子领域、话题、任务、术语，还要快速追热点，能把摘要翻译清楚就已经不错了，不能指望提供多少深刻见解（如果有的话当然还是大大的赞），或者干脆有些文章就是综述性质的，还是要靠自己读原文。  读论文应该是长时间来看非常有价值的投资了。论文读顺溜了，就比较容易保持批判思维，保持英文阅读能力，保持对新事物的好奇，以及在各位学者、工程师的带领下各种开脑洞。万一发现了有能用在工作中的论文，那当然就再划算不过了。有同事说，学术界的论文有 90% 都是没什么用的，我们的工作就是要找到剩下 10% 的有用的论文，然后应用在工程上。非常有道理。
+所以呢，给自己挖个大坑吧，从工程的角度去追论文，在博客里写写读后感，当一名有追求的码农~</description>
+    </item>
+    
+    <item>
+      <title>陈年老 Paper</title>
+      <link>https://yanwang10.github.io/2017/09/23/old-papers/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/09/23/old-papers/</guid>
+      <description>本帖列举其他有趣或者经典的文章，看到了就更新一下。
+Frustratingly Easy Domain Adaptation (arxiv 2009) 兴趣点：Domain Adaptation
+介绍了一种非常简单的特征变换来做 domain adaptation，简单有效而且原理容易理解。
+Skip-Thought Vectors (NIPS 2015) 兴趣点：generic distributed sentence encoder
+Breaking Cycles in Noisy Hierarchies (WebSci 2017) 兴趣点：Hierarchy
+这篇文章提出了一个好的问题，把带噪音的图转换为可以表示 hierarchy 的DAG。方法似乎都是已有的。文章把已有的方法归为三类：（1）在 BFS/DFS 加入简单的删除回边 (back edge) 的启发策略，（2）基于 minimum-feedback arc set (MFAS) 问题的 NP-hard 近似优化，以及（3）根据具体问题设计的特殊算法。但当然这三类方法各有各的问题。
+本文的方法是，把这个问题变为一个给节点打分排序的问题，节点得分高意味着在层次中处于更高的位置，或者表示了更普遍 (more general) 的概念。对于给节点打分这个子问题，作者应用了两种已有方法：
+TrueSkill，把 hierarchy 看成是多个玩家之间的比赛，两个节点之间的有向边表示一个节点“赢”了另一个节点，那么用给玩家排序的算法自然也可以给节点排序。这个想法很新颖，很贴合实际，唯一区别是，实际比赛场景中两个玩家可以多次对战以得到更好地估计，而一般的图中没有重边，可能算法给出的估计方差会大。
+Social Agony，假设社交网络中的人们会互相推荐，一般来说上游的人推荐下游的人，要去掉噪音回边来形成 DAG，给边赋一定的权重，然后求一个总权重最大的 DAG 子图。如果所有边权重一样就退化为 MFAS 问题。
+然后基于前两种基础方法，设计了一系列启发删边策略，用 voting 的方法聚合一下做出最终删边的决策。
+实验部分没太看，反正也没什么太多的分析，跑一堆数据也没意思，还是去看 TrueSkill 。
+TrueSkill: A Bayesian Skill Rating System (NIPS 2007) 兴趣点：TrueSkill</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 碎碎念</title>
+    <link>https://yanwang10.github.io/posts/</link>
+    <description>Recent content in Posts on 碎碎念</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 31 Mar 2018 11:37:52 -0700</lastBuildDate>
+    
+	<atom:link href="https://yanwang10.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>视频监控系统小调查</title>
+      <link>https://yanwang10.github.io/2018/03/31/surveillance-vms/</link>
+      <pubDate>Sat, 31 Mar 2018 11:37:52 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2018/03/31/surveillance-vms/</guid>
+      <description>调查目标：找一套合适的软件系统，可以用于视频监控，并且部署在自己的硬件上。
+硬性需求： * 可以完全部署在自己的硬件上（电脑或者 NAS），不需要云端服务器介入。 * 可以支持多种网络摄像头（而不只是局限于几个特定品牌）。
+其他关注点：
+ 软件属性：是否开源，费用（一次性付费或者订阅模式，每个通道的价格），支持哪些部署环境。 监控系统特性：支持的通道数量，视频质量，是否支持智能识别（如运动捕获、人脸识别等），是否通过网页进行操作，是否有其他使用限制（比如免费版有水印或者不能长时间保存视频等）。  一些现成的列表：
+ TOP BEST FREE/PAID VIDEO MANAGEMENT SOFTWARE FOR IP CAMERAS CCTV Test: VMS for free?  威联通 NAS 官方应用 作为威联通 NAS 的用户，首先想到的是威联通官方提供的 QVR Pro 和 Surveillance Station 两个应用，虽然没试用过，也不知道这两者有何异同，不过相信官方应可维护性和性能应该比较好，而且给出了所有支持的网络摄像头列表，兼容性上应该不成问题。
+主要问题就是贵，付费模式是一次性购买授权，Surveillance Station 的价格是每个通道 $60（最多4个通道），QVR Pro 的价格是每个通道 $60~70（最多8个通道）。不知道实际上需要多少通道，不过 4 个实在有点少，8 个还凑合。
+因此，才会想要调查其他的可能选项，运行在自己的 NAS 上。
+ZoneMinder 一个开源免费的系统 (Github)，根据介绍，这套系统提供网页操作支持，兼容网络摄像头（IP-enabled camera），给主流 Linux 发行版准备了安装包，也可以自己编译打包成 Docker 镜像，不支持 Windows。有文档介绍安装、部署、使用，有相对较活跃的论坛，甚至接通了 BountySource，可以付费悬赏实现特定的功能或者文档需求。
+Rapidvms 一个开源的系统（家用免费，商用付费），可以自己编译部署服务器端，有文档支持。客户端声称跨平台，免费版是用特定的客户端软件进行操作，也可以按年付费（$30/年）使用该公司开发的 H5stream 系统，这样就可以使用网页版的控制台。似乎整个产品还在开发中，刚支持 OpenCV 并提供了一个人脸识别的用例，</description>
+    </item>
+    
+    <item>
+      <title>2018 读书记录</title>
+      <link>https://yanwang10.github.io/2018/01/20/read-some-books/</link>
+      <pubDate>Sat, 20 Jan 2018 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2018/01/20/read-some-books/</guid>
+      <description>趁年轻，多读书。本文列举了我在 2018 年读过的书籍。年内不时更新。
+《首先，打破一切常规》 这本书介绍了一些管理者所应该具有的观点和能力，其实读完前四分之一就大概够了，剩下的部分都是在反复强调在开头提出的那些论点，以及用一些正面或反面案例来说明不同观念/决策会带来怎样的结果。</description>
+    </item>
+    
+    <item>
+      <title>CFA 一级网课小调查</title>
+      <link>https://yanwang10.github.io/2018/01/14/cfa-online-course-survey/</link>
+      <pubDate>Sun, 14 Jan 2018 13:43:52 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2018/01/14/cfa-online-course-survey/</guid>
+      <description>调查目标：找一些网络课程来学习、备考 CFA 一级。
+个人条件简单描述就是湾区码农。具体描述起来大概包括这些方面：
+ 纯理工背景：对于高数线代的基础内容，复习一下应该还是可以想起来不少的。 无经济、金融背景：完全零基础，这也是需要通过网课学习的原因，自己看书（即便是 notes）太吃力，恐难以坚持。 需要时间灵活：全职工作，基本只有周末有空，直播甚至现场课程就算了，必须支持视频回看。  关注点包括：
+ 授课语言：不得不说还是中文授课更亲切、高效一些，特别是在对整个术语体系不了解的情况下，全英文授课可能前期比较痛苦，考虑自己的英语水平，先用母语搭起概念框架再映射到英语也是可选的选项。 时间长度：可能需要做好持久战的准备，需要有详尽的课程内容，只有概念导览或者考前冲刺是不够的。 价格：太便宜甚至免费的课程担心不靠谱，太贵的课程担心不实用（比如直播课就不实用，要么有时差要么语言能力欠缺）甚至被收智商税。  中文课程选项 可选选项全部来自搜索引擎的直接结果，或者结果页面中提到的间接结果。
+上海财经大学商学院培训中心 来自很早的一个豆瓣帖子的最近回复。
+提前报名约 ￥4K，当期报名约 ￥7K。至少有上财的名号背书。
+高顿网校 搜索结果，非广告位。
+没看出什么明显特色，有多种班次，价位和课时差异巨大。
+金程教育 搜索结果，非广告位。
+号称 2012 年开班以来一级通过率非常高（近两年在75%~80%），长线班 ￥13K，冲刺班 ￥8K。
+沪江网校 搜索结果，非广告位。
+使用沪江旗下的 CCtalk授课，没搞清楚是直播还是视频回放，还是两者兼有。￥7.5K。
+TheAnalystSpace 搜索结果，非广告位。
+有很多小的系列课，比如各个科目、考前模拟、试题讲解等，每个小课 $50~$100 量级。也可以一次性付费成为会员（$240），获取访问所有课程的权限，默认权限到最近一次 CFA 考试截止（或者报名时告知考试时间，设置权限到考试结束后过期）。
+随机看了一个导论，全中文讲解+全英文课件。
+英文课程选项 FitchLearning 搜索结果，广告位。
+$700 网课或者 $1k 直播课，似乎没有长线学习的选项，都是冲下次考试的 program。特色不明。
+Kaplan Schweser 搜索结果，非广告位。
+$1.1K 的网课，没搞清楚这个 &amp;ldquo;Online Weekly Class&amp;rdquo; 到底是直播还是回看还是兼有，也是冲刺半年后 CFA 考试的项目。
+Wiley 来自两篇疑似广告的 CFA 课程盘点的最高推荐（盘点1， 盘点2，均来自搜索结果）。</description>
+    </item>
+    
+    <item>
+      <title>NIPS 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/12/02/nips17/</link>
+      <pubDate>Sat, 02 Dec 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/12/02/nips17/</guid>
+      <description>录用论文列表 ：NIPS 2017 Accepted papers
+Hash Embeddings for Efficient Word Representations 兴趣点：Hash embedding, efficient
+Attention Is All You Need 兴趣点：Attention, No Recurrent
+本文简直就是启发策略大合集，整体结构还算简明，大量篇幅介绍模型中的各种小 trick。整体结构来看，encoder 和 decoder 分别用多层 multi-head attention （其中 decode 中加入了一个 masking 用于消除 illegal connection），相邻层之间传递残差 （带 dropout），如果模型展开的话确实像变形金刚的两条腿，也不愧叫做 Transformer。这个模型结构的好处是，通过取消 recurrent 层，提高计算的并行度，同时计算量也明显减少，适合用 GPU 或者 TPU。至于性能嘛……光在机器翻译的公开数据集上测试，我是不太信的。
+细节的 trick 主要包括：
+ 在计算 attention 的时候加入了一个分母（维度的平方根），生成这是为了弥合 multiplicative attention 和 additive attention 之间的性能差异。同一个分母也加入到了每个 attention 层内部的 softmax 之前。 位置编码，用正余弦函数来编码位置，限定了一个波长范围，这个函数有个特点，如果两个位置之间有固定的 offset，那么这两个位置的编码之间存在线性关系。好处就是，测试的序列长度可以比训练的序列更长。  知乎传送门：如何理解谷歌团队的机器翻译新作《Attention is all you need》？</description>
+    </item>
+    
+    <item>
+      <title>2017 读书记录</title>
+      <link>https://yanwang10.github.io/2017/07/29/read-some-books/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/07/29/read-some-books/</guid>
+      <description>趁年轻，多读书。本文列举了我在 2017 年读过的书籍。年内不时更新。
+《人间采蜜记：李银河自传》 抛却跟王小波有关的政治文化含义，抛却新闻上转述的头条观点，这些不是作者想要回顾的重点，甚至没有在书里提及。本书是一部很温暖的自述，一位老人回忆自己的一生。从对童年生长的大院儿的记忆，到青少年时代的插队，到求学治学的经历，到和爱人相遇相爱的生活，再到爱人逝去之后对自己生活和情感寄托的回顾，没有什么华丽的辞藻，但有一种特有的细腻，还有一点点社会科学家写论文的派头。感觉这样的人生是真实的、完满的，很令人羡慕。
+《最好的告别》 《富爸爸穷爸爸》 一本经典的财商教育启蒙，有点老。这本书仅仅是启蒙，只提供了一些基本概念和观念，没有太多具体的指导。粗粗扫了一遍，大概记住几个观点： * 财商对实现财务自由很重要，学校不教，需要自学。 * 要掌握一些会计知识，理解资产、负债、现金流。 * 要克服对钱的贪婪，也要克服对没钱的恐惧。
+《哲学家们都干了些什么》 这是本很不错的哲学入门书籍。本书不是专业论著，未必严谨，但是语言直白易懂又不失风趣，很容易读完。作者采用了实用主义的编写原则，为了回答一个终极问题（人生的意义），沿着一条主线剧情（对人类理性的思考），从苏格拉底一路讲到萨特和加缪，理出了哲学发展的一条重要脉络。作者也承认，有很多重要的哲学家和作者因为没有对书的主线剧情起到太大的作用所以没有提及，但至少本书提供了一个很有意思的切入点，可以理解哲学研究的问题和方法，一些历史上的哲学观点和流派。值得再读一遍，跳过八卦的部分，直接看主干。
+《上瘾五百年》 “瘾品贸易盛行于一个饥渴心灵取代了饥饿肚皮的世界。”
+本文介绍了“瘾品”的概念，然后梳理了几种瘾品（包括烈酒、烟草、咖啡以及）在近几百年里的发展和传播，并且从商贸、政治、立法等不同角度探讨了瘾品传播对人类社会和历史带来的影响。正文不算很长，而且其中的视角和观点（至少对我来说）很新鲜。
+《一本书读懂财报》 这本书短小精悍，案例简单易懂接地气。前三分之一快速介绍了三大报表（资产负债表、利润表、现金流量表），接下来通过案例分析，介绍了一些可以从财报中计算出的指标，从不同角度刻画企业的运营和盈利状况，以及不同的经营状况怎样表现在报表里。但毕竟作为一名非专业读者，读起来特别困……很多术语，幸好本书非常短，才能坚持读完，如果再长一些的话恐怕就读不下去了。</description>
+    </item>
+    
+    <item>
+      <title>ACL 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/08/12/acl17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/08/12/acl17/</guid>
+      <description>录用论文列表 ：ACL 2017 Accepted papers
+只浏览了 Long Paper 的几个section。
+IE QA Text Mining Applications Learning with Noise: Enhance Distantly Supervised Relation Extraction with Dynamic Transition Matrix 兴趣点：Noise in Relation Extraction
+没看懂这篇文章想干啥，只大概看了下核心部分，后面看不下去了。在正常训练过程中，模型会对每一个句子输出在各个 relation 上的概率分布 $$p$$，本文提出同时优化一个表征噪音的矩阵 $$T$$，即 Transition Matrix，第 i 行第 j 列的元素表示第 i 个 relation 错误地被标为 j 的概率。这个矩阵是对每个句子都计算的，训练过程中用 $$T^T \times p$$ 归一化之后的结果作为输出的分布，用于计算损失函数；测试过程中不考虑 $$T$$ 直接用 $$p$$ 作为输出。
+很好奇多数情况下 $$T$$ 到底有多稠密，这个矩阵不一定会刻画噪音，没准会学出来一些不同 relation 之间的相关性，对于直接学习的模型输出进行调整。以及这个额外的计算量正比于支持的 relation 数量的平方，复杂度也是个问题，或许可以通过先验知识限制一下非零元素的个数。
+不太了解 TimeRE 这个评测集是什么样的，看到 0.9 precision 的时候能达到 0.8 recall，惊呆了，现在的数据都刷这么高了么。以及在 EntityRE 评测集上，avg 跟 avg_TM 区别不大，att_TM 只比 att 在 low recall high precision 的一端明显强一些，究竟是 TM 可以对 Distant Supervision 有帮助，还是 TM 可以修正掉 attention 的某些问题，有点可疑。</description>
+    </item>
+    
+    <item>
+      <title>EMNLP 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/08/19/emnlp17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/08/19/emnlp17/</guid>
+      <description>录用论文列表：EMNLP 2017 Accepted papers
+Importance sampling for unbiased on-demand evaluation of knowledge base population 兴趣点：Importance sampling, Percy Liang, Christopher D. Manning
+Supervised Learning of Universal Sentence Representations from Natural Language Inference Data 兴趣点：Sentence Representations, Antoine Bordes
+Bringing Structure into Summaries: Crowdsourcing a Benchmark Corpus of Concept Maps 兴趣点：Crowdsourcing, Benchmark Corpus
+这篇文章跟想象的不太一样，主要涉及的任务是 Multi-document Summarization, 其中的 Concept Map 是一种表示文章内容的手段。Concept Map 用来表示一批相关文档中的主要内容，是一个大小有约束的连通图，节点是文中提到的概念，边是概念间的关系，这里的“概念”和“关系”都是用词的序列来表示（不连接到KG）。一条边加上连接的两个点，就可以构成一个陈述句了。
+多文本摘要的传统标注非常昂贵，特别是 Concept Map 则对一般标注者不友好，只能由专家来标注（更昂贵）。本文通过标注 Concept Map 中的边（其实是陈述句）的重要性，来对特定话题的若干陈述进行排序（标注者不需要通读所有文章），得到最终的 Concept Map。
+这篇文章后面的部分主要讲解如何设置标注任务，以及对于标注结果可靠性、一致性的分析，介绍了很多细节。就没仔细看了。如果想更好地利用廉价的人工标注（区别于专家标注），应该能从本文中找到不少启发。</description>
+    </item>
+    
+    <item>
+      <title>IJCAI 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/09/10/ijcai17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/09/10/ijcai17/</guid>
+      <description>录用论文列表：IJCAI 2017 Accepted papers
+Learning to Explain Entity Relationships with Pairwise Deep Ranking 兴趣点：Entity Relationships，Pairwise Deep Ranking
+Reconstruction-based Unsupervised Feature Selection: An Embedded Approach 兴趣点：Feature Selection, Reconstruction
+Improving Learning-from-Crowds through Expert Validation 兴趣点：Crowds, Expert
+Positive unlabeled learning via wrapper-based adaptive sampling 兴趣点：Adaptive sampling
+Hierarchical Feature Selection with Recursive Regularization 兴趣点：Hierarchical feature selection
+看了摘要发现主要处理的问题是 hierarchical classification (相对于 flat classification 而言) 中的特征筛选问题。一句 “In the big data era” 把我拉回学生时代。
+发现文章并没有介绍我真正感兴趣的话题，就没看了。对标题的理解有歧义，我的理解是 select hierarchical features，文章内容是 select features hierarchically.</description>
+    </item>
+    
+    <item>
+      <title>KDD 2017 阅读笔记</title>
+      <link>https://yanwang10.github.io/2017/08/12/kdd17/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/08/12/kdd17/</guid>
+      <description>录用论文列表 ：KDD 2017 Accepted papers
+只浏览了 RESEARCH TRACK PAPERS - ORAL 的部分。
+Learning certifiably optimal rule lists for categorical data 兴趣点：Rule learning
+本文讲了一种在小规模数据+离散特征的条件下，学习 decision rule 模型的一种算法。符号记法比较复杂，有很多证明，匆匆扫了一眼。主要是用前缀树做了一些优化，证了一些跟前缀有关的定理，实验的数据太小了（$$O(10K)$$ 训练样例，$$O(10)$$ 个 categorical 特征维度，目测可以转化为 $$O(100)$$ 个 binary 特征）。不过 certifiably 确实是一个引人注目的特性。
+Local Higher-Order Graph Clustering 兴趣点：Jure Leskovec
+看不懂= = 弃疗
+Discrete Content-aware Matrix Factorization 兴趣点：Matrix Factorization, Descrete
+Toeplitz Inverse Covariance-Based Clustering of Multivariate Time Series Data 兴趣点：Time Series, Jure Leskovec
+Linearized GMM Kernels and Normalized Random Fourier Features 兴趣点： Random Fourier Features</description>
+    </item>
+    
+    <item>
+      <title>为什么我想要追论文</title>
+      <link>https://yanwang10.github.io/2017/07/05/why-to-read-papers/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/07/05/why-to-read-papers/</guid>
+      <description>说来惭愧，已经有许久时间，没有定时定量读论文了。
+曾几何时，也有过一个科研梦，想要读博，想要突破人类知识的边界。后来阴差阳错连滚带爬读了硕进入工业界，隐约感到自己不是搞科研的料，不过还是有点小遗憾。所幸本科期间做过一些粗浅的科研工作，虽然没啥成果，至少感受了一下过程。硕士阶段做过一些话题的调研，读了一些论文。工作了之后也有组里的 reading group，同事们时常推荐一些论文，以及东家也算是工业界盛产论文的大厂，偶尔感兴趣会去围观一下最新成果。这样说来，也算是一直没有扔下读论文这门功课。
+论文需要读，或者说需要追。除去极少数开天辟地的神作，大多数论文都互相连接、形成脉络，而不是独立存在的，而且。追论文有多种维度，可以追某些大学或者公司的研究组的工作，追某些话题或者方法，或者干脆就是追某些会议。我觉得追会议是一种非常有效的方式，原因有下：
+ Peer review 帮助大家把大部分质量低劣或者没有新意的论文挡在门外，顶级会议录用的文章的质量相对更有保证一些，不像前段时间 arxiv 上某篇文章标题大而不当而且质量堪忧，引起“大讨论”。 会议已经按照大方向划分了论文，而且各个会议还有不同的风格，表现在论文的侧重点不同（偏理论/应用），各种方法占据比例不一，术语体系也略有不同。相似的文章放在一起看，大概会轻松一些。 按会议追论文，可以同时看到不同研究组的工作，百家争鸣当然是好事，开拓眼界。  追论文是长久的修行。一段时间不读论文，阅读速度也慢了，对工作思路也不敏感了，不知道现在什么话题、什么方法比较火，效果如何，对于未来的趋势更是毫无概念。所幸偶尔还刷刷公众号，比如 PaperWeekly、新智元、程序媛的日常等，所以还算没有与世隔绝。这些公众号提供了不错的服务，筛选时下最火的工作，给出中文的摘要和评述，可以大大提高吸收的效率。但仅靠看这些公众号的推送，是难以达到自己追论文的效果的，原因有很多：
+ 每个公众号推送数量有限，各个号覆盖的工作又有不少重合之处，最终的总覆盖率实在太低。跟 AI/ML/DL/NLP 相关的优秀会议，录用文章数量往往有上百篇甚至三四百篇，读四五十篇摘要、通读十几篇论文，完全不算夸张。相比而言公众号里只提到十几篇文章的摘要，数量相差太多了。 公众号推送难免考虑传播的效果，噱头多、背景硬的文章大概更容易受重视。有些工作扎扎实实打磨细节但是相对枯燥，或者理解的门槛非常高，恐怕不能入选推送，而这些工作可能对我会更有启发。 公众号编辑、运营人员的精力和水平都是有限的，有那么多的子领域、话题、任务、术语，还要快速追热点，能把摘要翻译清楚就已经不错了，不能指望提供多少深刻见解（如果有的话当然还是大大的赞），或者干脆有些文章就是综述性质的，还是要靠自己读原文。  读论文应该是长时间来看非常有价值的投资了。论文读顺溜了，就比较容易保持批判思维，保持英文阅读能力，保持对新事物的好奇，以及在各位学者、工程师的带领下各种开脑洞。万一发现了有能用在工作中的论文，那当然就再划算不过了。有同事说，学术界的论文有 90% 都是没什么用的，我们的工作就是要找到剩下 10% 的有用的论文，然后应用在工程上。非常有道理。
+所以呢，给自己挖个大坑吧，从工程的角度去追论文，在博客里写写读后感，当一名有追求的码农~</description>
+    </item>
+    
+    <item>
+      <title>测试评论</title>
+      <link>https://yanwang10.github.io/2017/08/20/test-comments/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/08/20/test-comments/</guid>
+      <description>这篇文章专为测试评论功能而生~</description>
+    </item>
+    
+    <item>
+      <title>用 NAS 搭私有云</title>
+      <link>https://yanwang10.github.io/2017/06/14/new-nas/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/06/14/new-nas/</guid>
+      <description>最近一不小心进了 NAS 的坑，入了设备之后玩儿了几天，感觉非常有趣，可玩性很不错。本文记录一下自己折腾的成果，不时会来更新。
+ TOC {:toc}  设备 对比了威联通的不同型号的设备，最后选择了 TS-251+ NAS。买的是 2G 内存版，自己另买 2x4G 内存扩到 8G。硬盘的话就两块希捷的 4T 硬盘组 Raid 0，毕竟对于数据的稳定性还是有些需求的。这个 NAS 可以连 HDMI 输出和 USB 的鼠标键盘，当成一个小电脑用，但已经有台式机了，就没这个需求了，反正目前所有的操作都可以在网页版使用界面中完成。
+入手之后还是有点小遗憾，因为只有两个硬盘位，要想留冗余的话，就不能用 SSD 来做缓存加速了。似乎有些玩儿法是在更多硬盘位的 NAS 上面用 SSD 做缓存加速的，很能理解，毕竟用这种常规机械硬盘组 Raid 0，对于写入速度实在是不能有太高的要求。目前 NAS 主要只有我一个人用，但愿之后不会想玩儿什么对写入要求高的东西。
+这台设备的一大亮点就是支持虚拟化技术，可以跑容器和虚拟机，这是可玩性的保证。同时，要想真的玩儿起来容器或者虚拟机，内存一定要大（这台设备最大支持 8G），因为 NAS 自带的系统就会占到 1G 多内存。
+安装 拿到机器，官网给了升级内存的示意图 （不怕 8G 的机型卖不出去么……），只需要一把合适的螺丝刀即可完成。装好内存，接上电源和网线，然后启动，滴滴滴几声之后就可以连接了。用官方的软件 QFinder 就可以自动检测局域网内的 NAS，然后连接、更新固件、格式化硬盘、等等。
+自己懒得搞域名了，自己配置起来怪麻烦的。在 myQNAPcloud 上注册账号、连接自己的 NAS，然后就可以申请动态的二级域名 xxx.myqnapcloud.com，很方便，而且二级域名是可修改的（虽然我没改过）。然后自己的 NAS 上面的各种服务可以监听不同的端口（记得在路由/调制解调器上设置端口转发），虽然用起来有点不方便（需要记住端口号），不过谁让我懒得自己配呢木哈哈哈。大不了就是自己写个静态的 HTML 保存各种重定向呗。这些都不是重点。
+容器 以 admin 身份登录 NAS 管理页面，去 App Center 找到 Container Station 并下载安装，然后就可以在 Container Station 里面操作管理容器了。点击 Create Container，然后跳到搜索页面。威联通提供了一些官方的镜像，如下图所示。这些镜像都已经为威联通的 NAS 配置好了，不需要额外的设置，点击创建即可自动下载镜像、配置环境并启动应用，比如 WordPress。Container Station 中还可以搜索 DockerHub 的容器镜像，只是需要自己配置一下才能正常运行。</description>
+    </item>
+    
+    <item>
+      <title>陈年老 Paper</title>
+      <link>https://yanwang10.github.io/2017/09/23/old-papers/</link>
+      <pubDate>Tue, 13 Jun 2017 21:21:21 -0700</pubDate>
+      
+      <guid>https://yanwang10.github.io/2017/09/23/old-papers/</guid>
+      <description>本帖列举其他有趣或者经典的文章，看到了就更新一下。
+Frustratingly Easy Domain Adaptation (arxiv 2009) 兴趣点：Domain Adaptation
+介绍了一种非常简单的特征变换来做 domain adaptation，简单有效而且原理容易理解。
+Skip-Thought Vectors (NIPS 2015) 兴趣点：generic distributed sentence encoder
+Breaking Cycles in Noisy Hierarchies (WebSci 2017) 兴趣点：Hierarchy
+这篇文章提出了一个好的问题，把带噪音的图转换为可以表示 hierarchy 的DAG。方法似乎都是已有的。文章把已有的方法归为三类：（1）在 BFS/DFS 加入简单的删除回边 (back edge) 的启发策略，（2）基于 minimum-feedback arc set (MFAS) 问题的 NP-hard 近似优化，以及（3）根据具体问题设计的特殊算法。但当然这三类方法各有各的问题。
+本文的方法是，把这个问题变为一个给节点打分排序的问题，节点得分高意味着在层次中处于更高的位置，或者表示了更普遍 (more general) 的概念。对于给节点打分这个子问题，作者应用了两种已有方法：
+TrueSkill，把 hierarchy 看成是多个玩家之间的比赛，两个节点之间的有向边表示一个节点“赢”了另一个节点，那么用给玩家排序的算法自然也可以给节点排序。这个想法很新颖，很贴合实际，唯一区别是，实际比赛场景中两个玩家可以多次对战以得到更好地估计，而一般的图中没有重边，可能算法给出的估计方差会大。
+Social Agony，假设社交网络中的人们会互相推荐，一般来说上游的人推荐下游的人，要去掉噪音回边来形成 DAG，给边赋一定的权重，然后求一个总权重最大的 DAG 子图。如果所有边权重一样就退化为 MFAS 问题。
+然后基于前两种基础方法，设计了一系列启发删边策略，用 voting 的方法聚合一下做出最终删边的决策。
+实验部分没太看，反正也没什么太多的分析，跑一堆数据也没意思，还是去看 TrueSkill 。
+TrueSkill: A Bayesian Skill Rating System (NIPS 2007) 兴趣点：TrueSkill</description>
+    </item>
+    
+  </channel>
+</rss>

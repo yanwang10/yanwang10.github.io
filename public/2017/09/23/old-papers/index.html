@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn" lang="zh-cn">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.40.1" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>陈年老 Paper &middot; 碎碎念</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://yanwang10.github.io/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://yanwang10.github.io/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://yanwang10.github.io/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://yanwang10.github.io/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="碎碎念" />
+
+  
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://yanwang10.github.io/"><h1>碎碎念</h1></a>
+      <p class="lead">
+       偶尔碎碎念 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://yanwang10.github.io/">Home</a> </li>
+        
+      </ul>
+    </nav>
+
+    <p>&copy; 2019. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>陈年老 Paper</h1>
+  <time datetime=2017-06-13T21:21:21-0700 class="post-date">Tue, Jun 13, 2017</time>
+  
+
+<p>本帖列举其他有趣或者经典的文章，看到了就更新一下。</p>
+
+<h2 id="frustratingly-easy-domain-adaptation-arxiv-2009">Frustratingly Easy Domain Adaptation (arxiv 2009)</h2>
+
+<p>兴趣点：Domain Adaptation</p>
+
+<p>介绍了一种非常简单的特征变换来做 domain adaptation，简单有效而且原理容易理解。</p>
+
+<h2 id="skip-thought-vectors-nips-2015">Skip-Thought Vectors (NIPS 2015)</h2>
+
+<p>兴趣点：generic distributed sentence encoder</p>
+
+<h2 id="breaking-cycles-in-noisy-hierarchies-websci-2017">Breaking Cycles in Noisy Hierarchies (WebSci 2017)</h2>
+
+<p>兴趣点：Hierarchy</p>
+
+<p>这篇文章提出了一个好的问题，把带噪音的图转换为可以表示 hierarchy 的DAG。方法似乎都是已有的。文章把已有的方法归为三类：（1）在 BFS/DFS 加入简单的删除回边 (back edge) 的启发策略，（2）基于 minimum-feedback arc set (MFAS) 问题的 NP-hard 近似优化，以及（3）根据具体问题设计的特殊算法。但当然这三类方法各有各的问题。</p>
+
+<p>本文的方法是，把这个问题变为一个给节点打分排序的问题，节点得分高意味着在层次中处于更高的位置，或者表示了更普遍 (more general) 的概念。对于给节点打分这个子问题，作者应用了两种已有方法：</p>
+
+<p><code>TrueSkill</code>，把 hierarchy 看成是多个玩家之间的比赛，两个节点之间的有向边表示一个节点“赢”了另一个节点，那么用给玩家排序的算法自然也可以给节点排序。这个想法很新颖，很贴合实际，唯一区别是，实际比赛场景中两个玩家可以多次对战以得到更好地估计，而一般的图中没有重边，可能算法给出的估计方差会大。</p>
+
+<p><code>Social Agony</code>，假设社交网络中的人们会互相推荐，一般来说上游的人推荐下游的人，要去掉噪音回边来形成 DAG，给边赋一定的权重，然后求一个总权重最大的 DAG 子图。如果所有边权重一样就退化为 MFAS 问题。</p>
+
+<p>然后基于前两种基础方法，设计了一系列启发删边策略，用 voting 的方法聚合一下做出最终删边的决策。</p>
+
+<p>实验部分没太看，反正也没什么太多的分析，跑一堆数据也没意思，还是去看 TrueSkill 。</p>
+
+<h2 id="trueskill-a-bayesian-skill-rating-system-nips-2007">TrueSkill: A Bayesian Skill Rating System (NIPS 2007)</h2>
+
+<p>兴趣点：TrueSkill</p>
+
+<p>这个算法是 Elo 算法的升级版，用于评估玩家的竞技水平，也是贝叶斯派的方法，可以考虑多人组队比赛的情况（不仅限于 1v1 的比赛），而且声称在 Xbox 上商用了。</p>
+
+<p>略复杂，暴露了对贝叶斯的不了解……</p>
+
+<h2 id="opening-the-black-box-of-deep-neural-networks-via-information">Opening the Black Box of Deep Neural Networks via Information</h2>
+
+<p>兴趣点：整个标题都是兴趣点</p>
+
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>
