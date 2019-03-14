@@ -8,6 +8,7 @@ tags:
   - 调查
 title: CFA 一级网课小调查
 url: /2018/01/14/cfa-online-course-survey/
+summary: "调查目标：找一些网络课程来学习、备考 CFA 一级。"
 ---
 
 

@@ -1,6 +1,8 @@
 theme = "hyde"
 baseURL = "https://yanwang10.github.io/"
-languageCode = "zh-cn"
+languageCode = "zh"
 title = "碎碎念"
+summaryLength = 1
 [params]
     description = "偶尔碎碎念"
+    
