@@ -1,0 +1,11 @@
+{
+    "theme": "hyde",
+    "title": "碎碎念",
+    "languageCode": "zh-cn",
+    "defaultContentLanguage": "zh-cn",
+    "summaryLength": 1,
+    "publishDir": ".",
+    "params": {
+        "description": "偶尔碎碎念"
+    }
+}
